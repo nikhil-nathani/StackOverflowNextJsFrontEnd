@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  button {
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 0.8em;
+
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:not(:last-child):not(:first-child) {
+      border-radius: 0px;
+    }
+
+    &:not(:last-child) {
+      margin-right: -1px;
+    }
+
+    &:hover {
+      color: white;
+      background-color: orange;
+    }
+  }
+}
+
+.active {
+  color: white !important;
+  background-color: orange !important;
+
+  &:hover {
+  
+  }
+}
+
+.borderBottom {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--black-100);
+  margin-right: 5px;
+}
